@@ -1,0 +1,42 @@
+Metadata version: 10.0
+Metadata size: 444 bytes
+Metadata max size: 65536 bytes
+Metadata slot count: 1
+Header flags: none
+Partition table:
+------------------------
+  Name: product
+  Group: main
+  Attributes: none
+  Extents:
+------------------------
+  Name: system
+  Group: main
+  Attributes: none
+  Extents:
+------------------------
+  Name: vendor
+  Group: main
+  Attributes: none
+  Extents:
+------------------------
+Super partition layout:
+------------------------
+------------------------
+Block device table:
+------------------------
+  Partition name: super
+  First sector: 2048
+  Size: 8589934592 bytes
+  Flags: none
+------------------------
+Group table:
+------------------------
+  Name: default
+  Maximum size: 0 bytes
+  Flags: none
+------------------------
+  Name: main
+  Maximum size: 0 bytes
+  Flags: none
+------------------------

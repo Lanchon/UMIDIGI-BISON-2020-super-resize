@@ -1,0 +1,70 @@
+GPT fdisk (gdisk) version 1.0.10
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid GPT with protective MBR; using GPT.
+Warning! Main partition table overlaps the first partition by 26 blocks!
+Try reducing the partition table size by 104 entries.
+(Use the 's' item on the experts' menu.)
+
+Command (? for help): p
+Disk /dev/loop0: 31238144 sectors, 119.2 GiB
+Sector size (logical/physical): 4096/4096 bytes
+Disk identifier (GUID): 00000000-0000-0000-0000-000000000000
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 5
+First usable sector is 34, last usable sector is 31238135
+Partitions will be aligned on 2-sector boundaries
+Total free space is 0 sectors (0 bytes)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1               8             263   1024.0 KiB  0700  boot_para
+   2             264            8455   32.0 MiB    0700  recovery
+   3            8456            8583   512.0 KiB   0700  para
+   4            8584           13703   20.0 MiB    0700  expdb
+   5           13704           13959   1024.0 KiB  0700  frp
+   6           13960           16007   8.0 MiB     0700  vbmeta
+   7           16008           18055   8.0 MiB     0700  vbmeta_system
+   8           18056           20103   8.0 MiB     0700  vbmeta_vendor
+   9           20104           28295   32.0 MiB    0700  nvcfg
+  10           28296           44679   64.0 MiB    0700  nvdata
+  11           44680           50465   22.6 MiB    0700  md_udc
+  12           50466           58657   32.0 MiB    0700  metadata
+  13           58658           60705   8.0 MiB     0700  protect1
+  14           60706           63487   10.9 MiB    0700  protect2
+  15           63488           65535   8.0 MiB     0700  seccfg
+  16           65536           77823   48.0 MiB    0700  persist
+  17           77824           78335   2.0 MiB     0700  sec1
+  18           78336           79103   3.0 MiB     0700  proinfo
+  19           79104          104703   100.0 MiB   0700  md1img
+  20          104704          104959   1024.0 KiB  0700  spmfw
+  21          104960          106495   6.0 MiB     0700  scp1
+  22          106496          108031   6.0 MiB     0700  scp2
+  23          108032          108287   1024.0 KiB  0700  sspm_1
+  24          108288          108543   1024.0 KiB  0700  sspm_2
+  25          108544          112383   15.0 MiB    0700  cam_vpu1
+  26          112384          116223   15.0 MiB    0700  cam_vpu2
+  27          116224          120063   15.0 MiB    0700  cam_vpu3
+  28          120064          124159   16.0 MiB    0700  gz1
+  29          124160          128255   16.0 MiB    0700  gz2
+  30          128256          144639   64.0 MiB    0700  nvram
+  31          144640          144895   1024.0 KiB  0700  lk
+  32          144896          145151   1024.0 KiB  0700  lk2
+  33          145152          153343   32.0 MiB    0700  boot
+  34          153344          155391   8.0 MiB     0700  logo
+  35          155392          157439   8.0 MiB     0700  dtbo
+  36          157440          158719   5.0 MiB     0700  tee1
+  37          158720          159999   5.0 MiB     0700  tee2
+  38          160000          161791   7.0 MiB     0700  teksunhw
+  39          161792         2258943   8.0 GiB     0700  super
+  40         2258944         2275327   64.0 MiB    0700  cache
+  41         2275328        31223031   110.4 GiB   0700  userdata
+  42        31223032        31234039   43.0 MiB    0700  otp
+  43        31234040        31238135   16.0 MiB    0700  flashinfo
+
+Command (? for help): 
+

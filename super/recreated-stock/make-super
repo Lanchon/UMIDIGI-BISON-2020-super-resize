@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -eu
+
+name=super-recreated-stock
+
+lpmake \
+	--device super:3758096384 \
+	--metadata-size 65536 \
+	--metadata-slots 2 \
+	--group main:3755999232 \
+	--partition product:readonly:$((2912792*512)):main --image product=../super-stock/product.img \
+	--partition system:readonly:$((2567672*512)):main --image system=../super-stock/system.img \
+	--partition vendor:readonly:$((1382192*512)):main --image vendor=../super-stock/vendor.img \
+	--sparse \
+	--output ${name}.img
+
+simg2img ${name}.img ${name}-raw.img
+lpdump -a ${name}-raw.img >${name}-dump.txt
+rm ${name}-raw.img
+

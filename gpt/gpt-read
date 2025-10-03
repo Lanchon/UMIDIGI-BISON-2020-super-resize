@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -eu
+
+mtk ro 0x0 0x8000 pgpt.bin
+echo
+md5sum pgpt.bin pgpt-stock.bin pgpt-patched.bin 
+
+echo
+
+mtk ro 0x1DCA7F8000 0x8000 sgpt.bin
+echo
+md5sum sgpt.bin sgpt-stock.bin sgpt-patched.bin 
+

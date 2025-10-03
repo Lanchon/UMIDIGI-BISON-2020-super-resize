@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -eu
+
+simg2img super.img super-raw.img
+lpdump -a super-raw.img >super-stock-dump.txt
+lpunpack super-raw.img .
+rm super-raw.img
+

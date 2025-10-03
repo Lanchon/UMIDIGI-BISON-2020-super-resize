@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -eu
+
+name=super-patched-vendor-only
+
+lpmake \
+	--device super:8589934592 \
+	--metadata-size 65536 \
+	--metadata-slots 1 \
+	--group main:0 \
+	--partition product:none:0:main \
+	--partition system:none:0:main \
+	--partition vendor:none:0:main --image vendor=../super-stock/vendor.img \
+	--sparse \
+	--output ${name}.img
+
+simg2img ${name}.img ${name}-raw.img
+lpdump -a ${name}-raw.img >${name}-dump.txt
+rm ${name}-raw.img
+

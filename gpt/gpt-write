@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -eu
+
+#source=stock
+source=patched
+
+mtk wo 0x0 0x8000 pgpt-${source}.bin
+
+echo
+
+mtk wo 0x1DCA7F8000 0x8000 sgpt-${source}.bin
+

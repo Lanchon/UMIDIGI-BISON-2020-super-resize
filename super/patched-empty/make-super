@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -eu
+
+name=super-patched-empty
+
+lpmake \
+	--device super:8589934592 \
+	--metadata-size 65536 \
+	--metadata-slots 1 \
+	--group main:0 \
+	--partition product:none:0:main \
+	--partition system:none:0:main \
+	--partition vendor:none:0:main \
+	--sparse \
+	--output ${name}.img
+
+lpdump -a ${name}.img >${name}-dump.txt
+

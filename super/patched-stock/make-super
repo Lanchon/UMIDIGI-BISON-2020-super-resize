@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -eu
+
+name=super-patched-stock
+
+lpmake \
+	--device super:8589934592 \
+	--metadata-size 65536 \
+	--metadata-slots 1 \
+	--group main:0 \
+	--partition product:none:0:main --image product=../super-stock/product.img \
+	--partition system:none:0:main --image system=../super-stock/system.img \
+	--partition vendor:none:0:main --image vendor=../super-stock/vendor.img \
+	--sparse \
+	--output ${name}.img
+
+simg2img ${name}.img ${name}-raw.img
+lpdump -a ${name}-raw.img >${name}-dump.txt
+rm ${name}-raw.img
+
